@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">PicPay Teste</string>
-    <string name="title">Contatos</string>
+    <string name="app_name">T P C</string>
+    <string name="title">Test PicPay Contacts</string>
     <string name="error">Ocorreu um erro. Tente novamente.</string>
-
+    <string name="boa">Nice!</string>
+    <string name="opa">ops...</string>
+    <string name="reestablished_internet_connection">your connection is back</string>
+    <string name="no_internet_connection">you are disconnected</string>
 </resources>

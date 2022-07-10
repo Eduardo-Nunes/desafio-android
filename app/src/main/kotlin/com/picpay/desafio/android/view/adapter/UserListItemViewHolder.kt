@@ -1,4 +1,4 @@
-package com.picpay.desafio.android
+package com.picpay.desafio.android.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.size.ViewSizeResolver
 import coil.transform.CircleCropTransformation
+import com.picpay.desafio.android.data.User
 import com.picpay.desafio.android.databinding.ListItemUserBinding
 
 class UserListItemViewHolder(

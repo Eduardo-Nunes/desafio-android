@@ -1,17 +1,14 @@
-package com.picpay.desafio.android
+package com.picpay.desafio.android.view.adapter
 
-import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.AsyncListDiffer
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DiffUtil.ItemCallback
 import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
+import com.picpay.desafio.android.data.User
 
-class UserListAdapter : ListAdapter<User, UserListItemViewHolder>(USER_LIST_DIFF_UTIL) {
+class UserListAdapter : ListAdapter<User, UserListItemViewHolder>(itemCallback()) {
 
     companion object {
-        val USER_LIST_DIFF_UTIL = object : ItemCallback<User>() {
+       private fun itemCallback() = object : ItemCallback<User>() {
             override fun areItemsTheSame(oldItem: User, newItem: User): Boolean =
                 oldItem == newItem
             override fun areContentsTheSame(oldItem: User, newItem: User): Boolean =

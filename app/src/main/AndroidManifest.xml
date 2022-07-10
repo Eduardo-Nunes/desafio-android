@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:name=".ApplicationContext"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name=".view.MainActivity"
             android:exported="true"
             android:configChanges="orientation|screenSize">
             <intent-filter>

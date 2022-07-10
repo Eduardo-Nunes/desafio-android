@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                 override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
                     progressBar.visibility = View.GONE
 
-                    adapter.users = response.body()!!
+                    adapter.submitList(response.body()!!)
                 }
             })
     }

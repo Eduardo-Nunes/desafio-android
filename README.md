@@ -1,6 +1,8 @@
 # PicPay - Desafio Android
 App para carregar uma lista de contatos
 
+(<img src="https://github.com/mobilepicpay/desafio-android/blob/master/desafio-picpay.mp4" width="300"/>)
+
 ## Tech stack
 - Minimum SDK level 21
 - [Kotlin](https://kotlinlang.org/) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) for asynchronous.

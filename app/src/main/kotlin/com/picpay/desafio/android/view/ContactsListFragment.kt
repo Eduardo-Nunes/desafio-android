@@ -45,7 +45,7 @@ class ContactsListFragment : Fragment() {
     }
 
     private fun createObservers(adapter: UserListAdapter) = with(_viewModel) {
-        getData().observe(viewLifecycleOwner) { usersData ->
+        getUsersData().observe(viewLifecycleOwner) { usersData ->
             adapter.submitList(usersData) {
                 binding.userListProgressBar.isVisible = false
             }

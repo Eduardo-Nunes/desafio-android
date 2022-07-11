@@ -1,32 +1,55 @@
 package com.picpay.desafio.android.view
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.picpay.desafio.android.R
+import androidx.core.view.isVisible
+import com.picpay.desafio.android.databinding.FragmentContactsListBinding
+import com.picpay.desafio.android.view.adapter.UserItemsDecorator
+import com.picpay.desafio.android.view.adapter.UserListAdapter
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ContactsListFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ContactsListFragment()
-    }
+    private var _binding: FragmentContactsListBinding? = null
+    private val binding get() = _binding!!
 
-    private lateinit var viewModel: ContactsListViewModel
+    private val _viewModel by viewModel<ContactsListViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_contacts_list, container, false)
+        _binding = FragmentContactsListBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ContactsListViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val adapter = setupAdapter()
+        createObservers(adapter)
+    }
+
+    private fun setupAdapter(): UserListAdapter {
+        val selfAdapter = UserListAdapter()
+
+        with(binding.recyclerView) {
+            setHasFixedSize(true)
+            addItemDecoration(UserItemsDecorator())
+            adapter = selfAdapter
+        }
+
+        return selfAdapter
+    }
+
+    private fun createObservers(adapter: UserListAdapter) = with(_viewModel) {
+        getData().observe(viewLifecycleOwner) { usersData ->
+            adapter.submitList(usersData) {
+                binding.userListProgressBar.isVisible = false
+            }
+        }
     }
 
 }

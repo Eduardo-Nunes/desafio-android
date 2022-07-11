@@ -3,7 +3,7 @@ package com.picpay.desafio.android.view.adapter
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil.ItemCallback
 import androidx.recyclerview.widget.ListAdapter
-import com.picpay.desafio.android.data.User
+import com.picpay.desafio.android.data.model.User
 
 class UserListAdapter : ListAdapter<User, UserListItemViewHolder>(itemCallback()) {
 

@@ -5,4 +5,5 @@
     <dimen name="margin_horizontal">16dp</dimen>
     <dimen name="margin_vertical">24dp</dimen>
     <dimen name="regular_text_size">14sp</dimen>
+    <dimen name="items_distance">8dp</dimen>
 </resources>

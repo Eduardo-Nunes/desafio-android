@@ -68,9 +68,6 @@ dependencies {
     implementation "com.squareup.okhttp3:mockwebserver:$okhttp_version"
 
     implementation "io.insert-koin:koin-android:$koin_version"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
 
     testImplementation "io.insert-koin:koin-test:$koin_version"
     testImplementation "io.insert-koin:koin-test-junit4:$koin_version"

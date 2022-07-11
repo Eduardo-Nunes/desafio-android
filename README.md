@@ -16,7 +16,6 @@ App para carregar uma lista de contatos
   - Repository pattern
 - [Coil](https://github.com/coil-kt/coil) - loading images.
 - [Retrofit2 & OkHttp3](https://github.com/square/retrofit) - construct the REST APIs and paging network data.
-- [Material-Components](https://github.com/material-components/material-components-android) - Material design components like ripple animation, Material cardView and buttons.
 
 
 [comment]: <> (<img src="https://github.com/mobilepicpay/desafio-android/blob/master/desafio-picpay.gif" width="300"/>)

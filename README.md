@@ -1,7 +1,7 @@
 # PicPay - Desafio Android
 App para carregar uma lista de contatos
 
-(<img src="https://github.com/mobilepicpay/desafio-android/blob/master/desafio-picpay.gif" width="300"/>)
+(<img src="https://github.com/Eduardo-Nunes/desafio-android/blob/master/desafio-picpay.gif?raw=true" width="300"/>)
 
 ## Tech stack
 - Minimum SDK level 21

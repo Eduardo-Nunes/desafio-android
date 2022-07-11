@@ -6,7 +6,7 @@ App para carregar uma lista de contatos
 - [Kotlin](https://kotlinlang.org/) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) for asynchronous.
 - Koin for dependency injection.
 - JetPack
-  - MutableLiveData - notify domain layer data to views.
+  - LiveData - notify domain layer data to views.
   - Lifecycle - dispose of observing data when lifecycle state changes.
   - ViewModel - UI related data holder, lifecycle aware.
   - Navigation Component - handle everything needed for in-app navigation.

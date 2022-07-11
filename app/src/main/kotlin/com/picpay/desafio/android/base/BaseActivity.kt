@@ -8,17 +8,17 @@ import com.picpay.desafio.android.components.infobarview.InfoBarView
 import com.picpay.desafio.android.extensions.hasConnectionAlert
 import com.picpay.desafio.android.extensions.noConnectionAlert
 import com.picpay.desafio.android.utils.networkstate.NetworkState
+import com.picpay.desafio.android.utils.networkstate.NetworkStateObserver
 import com.picpay.desafio.android.utils.networkstate.NetworkStateListener
-import com.picpay.desafio.android.utils.networkstate.NetworkStateManager
 
-abstract class BaseActivity : AppCompatActivity(), InfoBarProvider, NetworkStateListener {
+abstract class BaseActivity : AppCompatActivity(), InfoBarProvider, NetworkStateObserver {
 
     protected open var infoBar: InfoBarView? = null
-    private var networkStateManager: NetworkStateManager? = null
+    private var networkStateManager: NetworkStateListener? = null
 
     protected fun setupInfoBar(viewGroup: ViewGroup, bar: InfoBarView? = null) {
         infoBar = bar ?: InfoBarView(viewGroup)
-        networkStateManager = NetworkStateManager(this)
+        networkStateManager = NetworkStateListener(this)
     }
 
     override fun getInfoBarInstance(): InfoBarView? {
